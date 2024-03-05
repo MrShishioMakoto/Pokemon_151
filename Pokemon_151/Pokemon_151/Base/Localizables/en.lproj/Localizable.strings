@@ -1,0 +1,15 @@
+/* 
+  Localizable.strings
+ Pokemon_151
+
+  Created by goncaloalmeida on 05/03/2024.
+  
+*/
+
+"pokemon.logo" = "PokemonLogo";
+
+"success" = "Success";
+
+"error.generic" = "Error";
+"error.failed.to.decode" = "Error: Failed to decode!";
+"error.invalid.status.code" = "Error: Invalid status code!";
