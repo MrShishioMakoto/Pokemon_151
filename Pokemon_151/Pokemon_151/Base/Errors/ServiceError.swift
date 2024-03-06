@@ -8,16 +8,16 @@
 import Foundation
 
 enum ServiceError: Error {
+    case generic
     case custom(error: Error)
-    case failedToDecode
     case invalidStatusCode
     
     var errorDescription: String? {
         switch self {
+        case .generic:
+            return LocalizableKeys.ServiceError.generic.localizableString()
         case .custom(let error):
             return error.localizedDescription
-        case .failedToDecode:
-            return LocalizableKeys.ServiceError.failedToDecode.localizableString()
         case .invalidStatusCode:
             return LocalizableKeys.ServiceError.invalidStatusCode.localizableString()
         }

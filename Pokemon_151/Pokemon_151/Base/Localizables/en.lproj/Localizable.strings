@@ -11,5 +11,4 @@
 "success" = "Success";
 
 "error.generic" = "Error";
-"error.failed.to.decode" = "Error: Failed to decode!";
 "error.invalid.status.code" = "Error: Invalid status code!";

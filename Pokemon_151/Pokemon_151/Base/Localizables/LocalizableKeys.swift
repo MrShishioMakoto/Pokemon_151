@@ -14,7 +14,7 @@ enum LocalizableKeys {
     }
     
     enum ServiceError {
-        static let failedToDecode = "error.failed.to.decode"
+        static let generic = "error.generic"
         static let invalidStatusCode = "error.invalid.status.code"
     }
 }

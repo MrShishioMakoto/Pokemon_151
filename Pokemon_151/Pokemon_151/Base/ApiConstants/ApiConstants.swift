@@ -8,7 +8,8 @@
 import Foundation
 
 enum ApiConstants {
-    static let pokemonUrl = "https://pokeapi.co/api/v2/pokemon"
+    static let pokemonListUrl = "https://pokeapi.co/api/v2/pokemon"
+    static let pokemonDetailUrl = ""
     
     static let numberOfPokemons = "limit"
 }

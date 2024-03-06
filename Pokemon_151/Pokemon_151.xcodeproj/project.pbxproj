@@ -26,6 +26,7 @@
 		C99B49E02B97706100735BFD /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = C99B49E22B97706100735BFD /* Localizable.strings */; };
 		C99B49E42B97709400735BFD /* LocalizableKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = C99B49E32B97709400735BFD /* LocalizableKeys.swift */; };
 		C99B49E62B9770AE00735BFD /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C99B49E52B9770AE00735BFD /* String+Extension.swift */; };
+		C9A69A9B2B98BA2700ACDBDA /* DataType.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9A69A9A2B98BA2700ACDBDA /* DataType.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,6 +69,7 @@
 		C99B49E12B97706100735BFD /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		C99B49E32B97709400735BFD /* LocalizableKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalizableKeys.swift; sourceTree = "<group>"; };
 		C99B49E52B9770AE00735BFD /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
+		C9A69A9A2B98BA2700ACDBDA /* DataType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataType.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -156,6 +158,7 @@
 		C9948FBA2B962BBD007BA970 /* Base */ = {
 			isa = PBXGroup;
 			children = (
+				C9A69A992B98BA1000ACDBDA /* DataType */,
 				C9948FC12B962C91007BA970 /* View */,
 				C9948FC02B962C7B007BA970 /* ApiConstants */,
 				C9948FC32B962CA2007BA970 /* Extensions */,
@@ -265,6 +268,14 @@
 				C9948FDB2B964451007BA970 /* LoadingView.swift */,
 			);
 			path = Loading;
+			sourceTree = "<group>";
+		};
+		C9A69A992B98BA1000ACDBDA /* DataType */ = {
+			isa = PBXGroup;
+			children = (
+				C9A69A9A2B98BA2700ACDBDA /* DataType.swift */,
+			);
+			path = DataType;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -411,6 +422,7 @@
 				C9948FD52B963BA9007BA970 /* PokemonListViewModel.swift in Sources */,
 				C9948FD72B963C8B007BA970 /* PokemonListView.swift in Sources */,
 				C9948FCB2B962D7B007BA970 /* ApiConstants.swift in Sources */,
+				C9A69A9B2B98BA2700ACDBDA /* DataType.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
