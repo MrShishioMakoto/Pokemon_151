@@ -1,5 +1,5 @@
 //
-//  PokemonListService.swift
+//  NetworkService.swift
 //  Pokemon_151
 //
 //  Created by goncaloalmeida on 04/03/2024.
@@ -8,11 +8,11 @@
 import Foundation
 import Combine
 
-protocol PokemonListServiceProtocol {
+protocol NetworkServiceProtocol {
     func fetchData<T: Decodable>() -> AnyPublisher<T, ServiceError>
 }
 
-final class PokemonListService {
+final class NetworkService {
     
     func fetchData<T: Decodable>(_ dataType: DataType) -> AnyPublisher<T, ServiceError> {
         
@@ -23,8 +23,8 @@ final class PokemonListService {
         switch dataType {
         case .pokemonList(let limit):
             url.append(queryItems: [URLQueryItem(name: ApiConstants.numberOfPokemons, value: "\(limit)")])
-        case .pokemonDetail:
-            break
+        case .pokemonDetails(let index):
+            url = url.appendingPathComponent("\(index)", conformingTo: .url)
         }
         
         return URLSession.shared.dataTaskPublisher(for: url)

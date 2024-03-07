@@ -9,14 +9,14 @@ import Foundation
 
 enum DataType {
     case pokemonList(limit: Int)
-    case pokemonDetail
+    case pokemonDetails(index: Int)
     
     var url: URL? {
         switch self {
         case .pokemonList:
             return URL(string: ApiConstants.pokemonListUrl)
-        case .pokemonDetail:
-            return URL(string: ApiConstants.pokemonDetailUrl)
+        case .pokemonDetails:
+            return URL(string: ApiConstants.pokemonDetails)
         }
     }
 }

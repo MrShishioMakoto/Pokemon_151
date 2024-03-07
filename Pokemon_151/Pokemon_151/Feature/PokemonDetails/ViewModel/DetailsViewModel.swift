@@ -1,16 +1,16 @@
 //
-//  PokemonListViewModel.swift
+//  DetailsViewModel.swift
 //  Pokemon_151
 //
-//  Created by goncaloalmeida on 04/03/2024.
+//  Created by goncaloalmeida on 06/03/2024.
 //
 
 import Foundation
 import Combine
 
-class PokemonListViewModel: ObservableObject {
+class DetailsViewModel: ObservableObject {
     
-    @Published private (set) var pokemonList: PokemonList?
+    @Published private (set) var pokemonDetails: Details?
     @Published private (set) var isRefreshing: Bool = false
     @Published var hasError: Bool = false
     
@@ -21,12 +21,12 @@ class PokemonListViewModel: ObservableObject {
         self.service = service
     }
     
-    func fetchPokemonList() {
+    func fetchPokemonDetails(for index: Int) {
         
         isRefreshing = true
         hasError = false
         
-        service.fetchData(.pokemonList(limit: 151))
+        service.fetchData(.pokemonDetails(index: index))
             .sink { [weak self] completion in
                 switch completion {
                 case .finished:
@@ -35,8 +35,8 @@ class PokemonListViewModel: ObservableObject {
                     self?.hasError = true
                     print(error)
                 }
-            } receiveValue: { [weak self] pokemonList in
-                self?.pokemonList = pokemonList
+            } receiveValue: { details in
+                self.pokemonDetails = details
             }.store(in: &cancellables)
     }
 }

@@ -15,7 +15,7 @@ struct PokemonList: Decodable {
     }
 }
 
-struct Pokemon: Decodable {
+struct Pokemon: Decodable, Hashable {
     let id = UUID()
     let name: String
     let url: String
